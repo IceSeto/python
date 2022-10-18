@@ -1,0 +1,89 @@
+for i in range(5):
+    print(i)
+    0
+    1
+    2
+    3
+    4
+for i in range(0,10):
+    print(i)
+    0-9
+for i in range(0,10,3):
+    print(i)
+    0
+    3
+    6
+    9
+    
+name = "chengdu"
+for x in name:
+    print(x,end="")
+    chengdu
+    
+name = "chengdu"
+for x in name:
+    print(x)
+c
+h
+e
+n
+g
+d
+u
+
+a = ["aa","bb","cc","dd"]
+for i in range(len(a)):
+    print(i,a[i])
+    0 aa
+1 bb
+2 cc
+3 dd
+len()字符串长度
+
+
+i = 0
+while i < 5:
+    print("只是第%d次执行"%(i+1))
+    print("i = %d"%i)
+    i += 1
+
+#1-100求和
+a = 0
+for i in range(0,101):
+    a += i
+print(a)
+
+n = 100
+sum = 0
+counter = 1
+while counter <= n:
+    sum += counter
+    print("这是第%d次执行"%counter)
+    counter += 1
+    print(sum)
+    
+    
+    count = 4
+while count<5:
+    print(count,"小于5")
+    count+=1
+else:
+    print(count,"大于等于5")
+
+99乘法表
+for i in range(1,10):
+    for j in range(1,i+1):
+        n = i*j
+        print("%d*%d=%d"%(i,j,n),end="  ")
+    print("\n")
+'''
+i = 1
+
+while i <= 9:
+    j = 1
+    while j <= i:
+        n = i * j
+        print("%d*%d=%d" % (i, j, n), end="  ")
+        j +=1
+    i+=1
+    print("\n")
