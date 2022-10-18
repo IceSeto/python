@@ -1,0 +1,89 @@
+# -*-coding = utf-8 -*-
+# @Time : 2022/10/18 19:39
+# @Author : B21041528
+# @File : demo6.py
+# @software : PyCharm
+
+namelist = ["小张","小李","小王"]
+#增:[append]
+'''
+print("-----增加前，名单列表数据------")
+for name in namelist:
+    print(name)
+nametemp = input("请输入添加学生的姓名:")
+namelist.append(nametemp)  #在末尾追加一个元素
+
+print("-----增加前，名单列表数据------")
+for name in namelist:
+    print(name)
+'''
+[extend]
+a = [1,2]
+b = [3,4]
+a.append(b)   #将列表当作一个元素，加入到a列表中
+print(a)
+a.extend(b)   #将b列表中的每个元素，逐一追加到a列表中
+print(a)
+#增: [insert]
+a = [0,1,2]
+a.insert(1,3)  #第一变量表示下标，第二个表示元素（对象）
+print(a)
+
+#删 [del]  [pop]  [remove]
+
+moviename = ["加勒比海盗","哈利波特","速度与激情","哈利波特"] #可以出现重复数据
+print("-----删除前，名单列表数据------")
+for name in moviename:
+    print(name)
+
+#del moviename[1]     #在指定位置删除一个元素
+#moviename.pop()       #弹出末尾最后一个元素
+moviename.remove("哈利波特")   #直接删除指定内容
+print("-----删除前，名单列表数据------")
+for name in moviename:
+    print(name)
+
+#改 : []
+namelist = ["小张","小李","小王"]
+print("-----增加前，名单列表数据------")
+for name in namelist:
+    print(name)
+namelist[1] = "小红"
+print("-----增加前，名单列表数据------")
+for name in namelist:
+    print(name)
+
+#查 :[in , not in]
+namelist = ["小张","小李","小王"]
+findname = input("请输入你要查找的学生姓名")
+if findname in namelist:
+    print("在学员名单中找到了相同的名字")
+else:
+    print("没有找到")
+'''
+mylist = ["a","b","c","a","b"]
+
+'''
+print(mylist.index("a",1,4))    #精准查找 指定范围内查找 并返回所查元素下标
+print(mylist.index("a",1,3))    #范围区间 左闭右开 不包括 下表3位置
+                                #找不到会报错
+'''
+print(mylist.count("b"))     #统计摸个元素出现几次
+print(mylist.count("c"))
+
+#排序 与反转
+a = [1,3,4,2]
+print(a)
+a.reverse()   #将列表所有元素反转
+print(a)
+a.sort()     #排序 升序
+print(a)
+a.sort(reverse=True)   #排序 降序
+print(a)
+
+
+
+
+
+
+
