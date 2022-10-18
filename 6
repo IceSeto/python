@@ -1,0 +1,20 @@
+#schoolnames = [[],[],[]]  #有三个元素的空列表，每个元素都是空列表
+schoolnames = [["北京大学","清华大学"],["南开大学","天津大学"],["洛阳理工","河科大","洛阳师范"]]
+print(schoolnames[0][0])
+'''
+import random
+offices = [[],[],[]]
+names = ["A","B","C","D","E","F","G","H"]
+for name in names:
+    index = random.randint(0,2)
+    offices[index].append(name)
+i = 1
+for office in offices:
+    print("办公室%d的人数为：%d"%(i,len(office)))
+    i+=1
+    for name in office:
+        print("%s"%name,end="\t")
+    print("\n")
+    print("-"*20)
+    
+    
