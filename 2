@@ -1,0 +1,64 @@
+'''
+print("标准化输出字符串")
+a = 10
+print("这是变量：",a)
+#变量名必须是大小写英文、数字和下划线( _ )的组合,且不能以数字开头,如:
+a=1 #变量a是一 个整数
+t_007 ='T007' #变量t _007是一 个字符串
+'''
+
+'''
+%C 字符
+%s 通过str()字符串转换来格式化
+%I 有符号十进制整数
+%d 有符号十进制整数
+%u 无符号十进制整数
+%o 八进制整数
+%x 十六进制整数(小写字母)
+%X 十六进制整数(大写字母)
+ %e 索引符号(小写'e')
+%E 索引符号(大写"E")
+%f 浮点实数
+'''
+#格式化输出
+age = 18
+print("我的年纪是多少；%d岁"%age)
+print("我的名字是%s，我的国籍是%s"%("小李","中国"))
+
+print("aaa","bbbb","ccc")
+print("www","baidu","com",sep=".")
+
+print("hello",end="")
+print("world",end="\t")
+print("python",end="\n")
+print("end")
+
+
+password = input("请输入密码；")
+print("您刚刚输入的密码是；",password)
+
+
+a = input("输入；")
+print(type(a))
+print("输入了一个数字；%d"%a)
+
+
+输入；123
+<class 'str'>
+Traceback (most recent call last):
+  File "D:\pycharm\新建文件夹\demo2.py", line 52, in <module>
+    print("输入了一个数字；%d"%a)
+TypeError: %d format: a real number is required, not str
+
+强制类型转换
+a = int("123")
+print(type(a))
+b = a + 100
+print(b)
+
+a = int(input("输入；"))
+print(type(a))
+print("输入了一个数字；%d"%a)
+输入；123
+<class 'int'>
+输入了一个数字；123
