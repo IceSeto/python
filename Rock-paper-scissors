@@ -1,0 +1,31 @@
+import random
+print("石头剪刀布")
+print("石头（0），剪刀（1），布（2）")
+y = int(input("请选择"))
+x = random.randint(0,2)
+if x == 0 :
+    print("电脑出石头")
+elif x == 1:
+    print("电脑出剪刀")
+else:
+    print("电脑出布")
+
+
+if x == 0 and y == 0:
+    print("平局")
+elif x == 1 and y == 1:
+    print("平局")
+elif x == 2 and y == 2:
+    print("平局")
+elif x == 0 and y == 1:
+    print("你输了")
+elif x == 0 and y == 2:
+    print("你赢了")
+elif x == 1 and y == 0:
+    print("你赢了")
+elif x == 1 and y == 2:
+    print("你输了")
+elif x == 2 and y == 0:
+    print("你输了")
+elif x == 2 and y == 1:
+    print("你赢了")
