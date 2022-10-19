@@ -1,0 +1,39 @@
+# -*-coding = utf-8 -*-
+# @Time : 2022/10/19 10:33
+# @Author : B21041528
+# @File : demo9.py
+# @software : PyCharm
+
+'''
+f = open("text.txt","w")  #打开文件，w模式（写模式），文件不存在就新建
+f.write("hello,world.I am here!") #将字符串写入文件中
+f.close() #关闭文件
+'''
+'''  #read方法 读取指定的字符，开始时定位在文件开头，每执行一次向后移动指定字符数
+f = open("text.txt","r")
+
+contnet = f.read(5)
+
+print(contnet)
+contnet = f.read(5)
+print(contnet)
+f.close()
+'''
+'''
+f = open("text.txt","r")
+content = f.readlines()   #一次性读取全部文件为列表每行一个元素
+print(content)
+f.close()
+
+'''
+
+'''
+f = open("text.txt","r")
+content = f.readline()
+print("1:%s"%content)
+content = f.readline()
+print("2:%s"%content)
+content = f.readline()
+print("3:%s"%content)
+f.close()
+'''
