@@ -1,0 +1,95 @@
+# -*-coding = utf-8 -*-
+# @Time : 2022/10/19 10:33
+# @Author : B21041528
+# @File : demo9.py
+# @software : PyCharm
+
+'''
+f = open("text.txt","w")  #打开文件，w模式（写模式），文件不存在就新建
+f.write("hello,world.I am here!") #将字符串写入文件中
+f.close() #关闭文件
+'''
+'''  #read方法 读取指定的字符，开始时定位在文件开头，每执行一次向后移动指定字符数
+f = open("text.txt","r")
+
+contnet = f.read(5)
+
+print(contnet)
+contnet = f.read(5)
+print(contnet)
+f.close()
+'''
+'''
+f = open("text.txt","r")
+content = f.readlines()   #一次性读取全部文件为列表每行一个元素
+print(content)
+f.close()
+
+'''
+
+'''
+f = open("text.txt","r")
+content = f.readline()
+print("1:%s"%content)
+content = f.readline()
+print("2:%s"%content)
+content = f.readline()
+print("3:%s"%content)
+f.close()
+'''
+'''
+print("-----test1-----")
+f = open("123.txt", "r")   #用只读模式打开不存在的文件  报错
+print("-----test2-----")    #这句不执行
+'''
+'''
+#捕获异常
+try:
+    print("-----test1-----")
+    f = open("123.txt","r")
+    print("-----test2-----")
+except IOError:   #文件没找到  属于IO异常 （输入输出异常）
+    pass          #捕获异常后执行的代码
+'''
+'''
+
+try:
+    print(num)   #异常类型想要被捕获，需要一致
+except NameError:
+    print("产生错误了 ")
+'''
+'''
+try:
+    print("-----test1-----")
+    f = open("test1.txt", "r")
+    print("-----test2-----")
+    print(num)
+except (NameError,IOError):   #将可能产生的所有异常类型都放到（）中
+    print("产生错误了 ")
+'''
+
+#获取错误描述
+'''
+try:
+    print("-----test1-----")
+    f = open("text1.txt", "r")
+    print("-----test2-----")
+    print(num)
+except (NameError,IOError) as result:   #将可能产生的所有异常类型都放到（）中
+    print("产生错误了 ")
+    print(result)
+'''
+'''
+#捕获所有异常
+try:
+    print("-----test1-----")
+    f = open("text1.txt", "r")
+    print("-----test2-----")
+    print(num)
+except Exception as result:   #Exception可以承接所有异常
+    print("产生错误了 ")
+    print(result)
+'''
+
+
+#try ....finally 和嵌套
